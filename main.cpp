@@ -130,7 +130,7 @@ void polygonLine(){
     glEnd();
 }
 
-void cupboard(){
+void guardaRoupas(){
 //Guarda-Roupas
         
     glPushMatrix();
@@ -239,7 +239,7 @@ void cupboard(){
 }
 
 
-void bedsideTable(){
+void criadoMudo(){
 //Criado Mudo
       
       //side drawer
@@ -271,7 +271,7 @@ void bedsideTable(){
 }
 
 
-void bed(){
+void cama(){
 //Cama 
 
     //bed headboard
@@ -328,7 +328,7 @@ void bed(){
     
 }
 
-void lamp(){
+void lampada(){
 //Lamp 
         
         //lamp base
@@ -395,7 +395,7 @@ void base(){
     glPopMatrix();
 }
 
-void flower(){
+void flor(){
 //Vaso de flor
         
     //vase
@@ -613,7 +613,7 @@ void prateleiras(){
 
 }
 
-void wardrobe(){
+void armario(){
 //Armário
     glPushMatrix();
     glTranslatef(0, -0.2, 0);
@@ -710,14 +710,15 @@ void wardrobe(){
     glPopMatrix();
 }
 
-void window(){
+void janela(){
 //Janela
-    
+    glPushMatrix();
+    glTranslatef(-0.23, 0, 0);
+
     //window white open
     glColor3f(1.0,1.0,1.0);
     glPushMatrix();
-    glTranslatef(-0.9,1,8.9); //0.5,1,9.6
-    //glRotatef(22, 0,0,1);
+    glTranslatef(-0.9,1,8.9);
     glScalef(0.0001, .6, .3);
     drawCube();
     glPopMatrix();
@@ -726,7 +727,6 @@ void window(){
     glColor3f(0.8,0.6,0.4);
     glPushMatrix();
     glTranslatef(-0.9,1,8.9);
-    //glRotatef(22, 0,0,1);
     glScalef(0.04, 0.6, 0.0001);
     drawCube();
     glPopMatrix();
@@ -742,8 +742,7 @@ void window(){
     //window upper side corner
     glColor3f(0.7,0.6,0.5);
     glPushMatrix();
-    glTranslatef(-0.7,2.7,8.9);
-    //glRotatef(22, 0,0,1);
+    glTranslatef(-0.8,2.7,8.75);
     glScalef(0.0001, 0.05, 0.4);
     drawCube();
     glPopMatrix();
@@ -752,9 +751,8 @@ void window(){
     //window lower side corner
     glColor3f(0.7,0.6,0.5);
     glPushMatrix();
-    glTranslatef(-0.8,1.02,8.9);
-    //glRotatef(22, 0,0,1);
-    glScalef(0.0001, 0.02, 0.34);
+    glTranslatef(-0.8,1.02,8.75);
+    glScalef(0.0001, 0.05, 0.4);
     drawCube();
     glPopMatrix();
     
@@ -783,6 +781,8 @@ void window(){
     //glRotatef(22, 0,0,1);
     glScalef(0.0001, 0.6, 0.02);
     drawCube();
+    glPopMatrix();
+
     glPopMatrix();
 }
 
@@ -835,7 +835,7 @@ void fan(){
     glPopMatrix();
 }
 
-void dressingtable(){
+void penteadeira(){
 //Penteadeira
     glPushMatrix();
     glTranslatef(0, -0.2, -1.3);
@@ -1051,7 +1051,7 @@ void dressingtable(){
     glPopMatrix();
 }
 
-void Clock(){
+void relogio(){
 //Relógio
         
         //clock body
@@ -1161,17 +1161,17 @@ void display(void){
     glViewport(0, 0, 800, 600);
     
     base();
-    bedsideTable();
-    bed();
-    cupboard();
-    lamp();
-    flower();
+    criadoMudo();
+    cama();
+    guardaRoupas();
+    lampada();
+    flor();
     prateleiras();
-    wardrobe();
-    window();
+    armario();
+    janela();
     fan();
-    dressingtable();
-    Clock();
+    penteadeira();
+    relogio();
 
     glFlush();
     glutSwapBuffers();
