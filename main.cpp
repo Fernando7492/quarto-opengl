@@ -1,7 +1,6 @@
 #define GL_SILENCE_DEPRECATION
 #include <GL/glew.h>   
 #include <GL/glut.h> 
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -11,8 +10,7 @@ double windowHeight=800, windowWidth=600;
 double eyeX=7.0, eyeY=2.0, eyeZ=15.0, refX = 0, refY=0,refZ=0;
 double theta = 180.0, y = 1.36, z = 7.97888, a=2;
 
-static GLfloat v_cube[8][3] =
-{
+static GLfloat v_cube[8][3] = {
     {0.0, 0.0, 0.0}, //0
     {0.0, 0.0, 3.0}, //1
     {3.0, 0.0, 3.0}, //2
@@ -23,8 +21,7 @@ static GLfloat v_cube[8][3] =
     {3.0, 3.0, 0.0}  //7
 };
 
-static GLubyte quadIndices[6][4] =
-{
+static GLubyte quadIndices[6][4] = {
     {0, 1, 2, 3}, //bottom
     {4, 5, 6, 7}, //top
     {5, 1, 2, 6}, //front
@@ -34,8 +31,7 @@ static GLubyte quadIndices[6][4] =
 };
 
 
-static GLfloat colors[6][3] =
-{
+static GLfloat colors[6][3] = {
     {0.4, 0.1, 0.0}, //bottom
     {0.6, 0.0, 0.7}, //top
     {0.0, 1.0, 0.0},
@@ -46,8 +42,7 @@ static GLfloat colors[6][3] =
 
 
 
-void drawCube()
-{
+void drawCube() {
     glBegin(GL_QUADS);
     for (GLint i = 0; i <6; i++)
     {
@@ -59,8 +54,7 @@ void drawCube()
     glEnd();
 }
 
-static GLfloat v_pyramid[5][3] =
-{
+static GLfloat v_pyramid[5][3] = {
     {0.0, 0.0, 0.0},
     {0.0, 0.0, 2.0},
     {2.0, 0.0, 2.0},
@@ -68,21 +62,18 @@ static GLfloat v_pyramid[5][3] =
     {1.0, 4.0, 1.0}
 };
 
-static GLubyte p_Indices[4][3] =
-{
+static GLubyte p_Indices[4][3] = {
     {4, 1, 2},
     {4, 2, 3},
     {4, 3, 0},
     {4, 0, 1}
 };
 
-static GLubyte PquadIndices[1][4] =
-{
+static GLubyte PquadIndices[1][4] = {
     {0, 3, 2, 1}
 };
 
-void drawpyramid()
-{
+void drawpyramid(){
     glBegin(GL_TRIANGLES);
     for (GLint i = 0; i <4; i++)
     {
@@ -104,8 +95,7 @@ void drawpyramid()
 
 }
 
-void polygon()
-{
+void polygon(){
     glBegin(GL_POLYGON);
     glVertex2f(0,0);
     glVertex2f(6,0);
@@ -123,8 +113,7 @@ void polygon()
     glEnd();
 }
 
-void polygonLine()
-{
+void polygonLine(){
     glBegin(GL_LINE_STRIP);
     //glVertex2f(0,0);
     glVertex2f(6,0);
@@ -142,9 +131,8 @@ void polygonLine()
     glEnd();
 }
 
-void cupboard()
-{
-    //Armário
+void cupboard(){
+//Armário
         
         //cupboard
         glColor3f(0.5,0.2,0.2);
@@ -246,10 +234,9 @@ void cupboard()
         glPopMatrix();
 }
 
-//Criado mudo
-void bedsideTable()
-{
-    //bedside drawer *************************************
+
+void bedsideTable(){
+//Criado Mudo
       
       //side drawer
       glColor3f(0.2,0.1,0.1); //0.5,0.2,0.2
@@ -279,9 +266,10 @@ void bedsideTable()
       glPopMatrix();
 }
 
-//Cama
-void bed()
-{
+
+void bed(){
+//Cama 
+
     //bed headboard
     glColor3f(0.5,0.2,0.2);
     glPushMatrix();
@@ -336,9 +324,8 @@ void bed()
     
 }
 
-void lamp()
-{
-    //Lamp *****************************************
+void lamp(){
+//Lamp 
         
         //lamp base
         glColor3f(0,0,1);
@@ -368,55 +355,44 @@ void lamp()
 
 
 void base(){
-
 //base do quarto
 
     // parede direira
     glColor3ub(135,206,250);
     glPushMatrix();
-    glTranslatef(-1.5,-0.5,.5);
+    glTranslatef(-1.5,-0.5, -0.3);
     glScalef(4, 2, 0.1);
     drawCube();
     glPopMatrix();
-    
-    // parede esquerda
+
+    // Parede esquerda
     glColor3ub(173,216,230);
     glPushMatrix();
-    glTranslatef(-4.5,-1,0);
-    glScalef(1, 2, 5);
+    glTranslatef(-1.5, -0.5, 0);
+    glScalef(0.1, 2, 4);
     drawCube();
     glPopMatrix();
+    
     
    //teto
     glColor3ub(175,238,238);
     glPushMatrix();
-    glTranslatef(-2,5.1,0);
-    glScalef(4, 0.1, 5);
+    glTranslatef(-1.5,5,0);
+    glScalef(4, 0.1, 4);
     drawCube();
     glPopMatrix();
-    
-    // tapete*****
-    //glColor3ub(135,206,235);
-    //glPushMatrix();
-    //glScalef(5, 0.1, 7);
-    //glTranslatef(3,-0.2,7);
-    //glScalef(1.3, 0.01, 1.7);
-    //drawCube();
-    //glPopMatrix();
 
     // chão
     glColor3ub(139,69,19);
     glPushMatrix();
-    glScalef(5, 0.1, 5);
-    glTranslatef(-1,-5,0); //-1,-5,.5
-    //glScalef(5, 0.1, 7);
+    glScalef(4, 0.1, 4);
+    glTranslatef(-0.3,-5,0);
     drawCube();
     glPopMatrix();
 }
 
-void flower()
-{
-    //Flower vase
+void flower(){
+//Vaso de flor
         
     //vase
     glColor3f(0.545, 0.271, 0.075);
@@ -500,9 +476,8 @@ void flower()
     
 }
 
-void wallshelf()
-{
-    //Prateleiras **********************************************
+void wallshelf(){
+//Prateleiras
       
       //wall shelf one
       glColor3f(0.2,0.1,0.1);
@@ -656,59 +631,8 @@ void wallshelf()
 
 }
 
-void LinkinParkPoster()
-{
-    //Linkin Park Poster
-    
-    //poster black
-    glColor3f(0.0,0.0,0.0);
-    glPushMatrix();
-    glTranslatef(-1,1.4,4.6);
-    //glRotatef(22, 0,0,1);
-    glScalef(0.0001, .65, .8);
-    drawCube();
-    glPopMatrix();
-    
-    //Linkin Park logo
-    glColor3f(1.0,1.0,1.0);
-    glPushMatrix();
-    glTranslatef(-0.9,2.1,5.5);
-    //glRotatef(22, 0,0,1);
-    glScalef(0.0001, .02, .25);
-    drawCube();
-    glPopMatrix();
-    
-    //Linkin Park logo
-    glColor3f(1.0,1.0,1.0);
-    glPushMatrix();
-    glTranslatef(-0.9,2.1,6.2);
-    glRotatef(-14, 1,0,0);
-    glScalef(0.0001, .28, .02);
-    drawCube();
-    glPopMatrix();
-    
-    //Linkin Park logo
-    glColor3f(1.0,1.0,1.0);
-    glPushMatrix();
-    glTranslatef(-0.9,1.8,6);
-    glRotatef(-14, 1,0,0);
-    glScalef(0.0001, .29, .02);
-    drawCube();
-    glPopMatrix();
-    
-    //Linkin Park logo
-    glColor3f(1.0,1.0,1.0);
-    glPushMatrix();
-    glTranslatef(-0.9,2.1,5.5);
-    glRotatef(23, 1,0,0);
-    glScalef(0.0001, .25, .02);
-    drawCube();
-    glPopMatrix();
-}
-
-void wardrobe()
-{
-    //Wardrobe *******************************************
+void wardrobe(){
+//Guarda-roupas
        
        //wardrobe
        glColor3f(0.3,0.1,0);
@@ -800,9 +724,8 @@ void wardrobe()
        glPopMatrix();
 }
 
-void window()
-{
-    //Window ********************************************
+void window(){
+//Janela
     
     //window white open
     glColor3f(1.0,1.0,1.0);
@@ -877,8 +800,9 @@ void window()
     glPopMatrix();
 }
 
-void fan()
-{
+void fan(){
+//ventilador
+
     glPushMatrix();
     glTranslatef(3,4,8);
     
@@ -925,9 +849,8 @@ void fan()
     glPopMatrix();
 }
 
-void dressingtable()
-{
-    //Dressing table ************************************************
+void dressingtable(){
+//Penteadeiras
         
         //dressing table left body
         glColor3f(0.545, 0.271, 0.075);
@@ -1163,9 +1086,8 @@ void dressingtable()
         glPopMatrix();
 }
 
-void Clock()
-{
-    //Clock
+void Clock(){
+//Relógio
         
         //clock body
         glColor3f(0.545, 0.271, 0.075);
@@ -1259,8 +1181,8 @@ void Clock()
 }
 
 
-void display(void)
-{
+void display(void){
+
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
     glMatrixMode( GL_PROJECTION );
@@ -1280,7 +1202,6 @@ void display(void)
     lamp();
     flower();
     wallshelf();
-    //LinkinParkPoster();
     wardrobe();
     window();
     fan();
