@@ -108,7 +108,6 @@ void polygon(){
     glVertex2f(1, 2.2);
     glVertex2f(0.8, 2);
     glVertex2f(0.2,1);
-    //glVertex2f(0,0);
     
     glEnd();
 }
@@ -119,7 +118,7 @@ void polygonLine(){
     glVertex2f(6,0);
     glVertex2f(5.8,1);
     glVertex2f(5.2,2);
-   glVertex2f(5, 2.2);
+    glVertex2f(5, 2.2);
     glVertex2f(4, 2.8);
     glVertex2f(3,3);
     glVertex2f(2, 2.8);
@@ -132,8 +131,11 @@ void polygonLine(){
 }
 
 void cupboard(){
-//Armário
+//Guarda-Roupas
         
+    glPushMatrix();
+    glTranslatef(0, -0.2, -1.3);
+
         //cupboard
         glColor3f(0.5,0.2,0.2);
         glPushMatrix();
@@ -232,6 +234,8 @@ void cupboard(){
         glScalef(0.16, 0.02, 0.01);
         drawCube();
         glPopMatrix();
+
+    glPopMatrix();
 }
 
 
@@ -377,7 +381,7 @@ void base(){
    //teto
     glColor3ub(175,238,238);
     glPushMatrix();
-    glTranslatef(-1.5,5,2.7);
+    glTranslatef(-1.5,5.1,2.7);
     glScalef(4, 0.1, 3);
     drawCube();
     glPopMatrix();
@@ -632,8 +636,10 @@ void wallshelf(){
 }
 
 void wardrobe(){
-//Guarda-roupas
-       
+//Armário
+    glPushMatrix();
+    glTranslatef(0, -0.2, 0);
+
        //wardrobe
        glColor3f(0.3,0.1,0);
        glPushMatrix();
@@ -722,6 +728,8 @@ void wardrobe(){
        glScalef(0.01, 0.6, 0.0001);
        drawCube();
        glPopMatrix();
+
+    glPopMatrix();
 }
 
 void window(){
@@ -850,13 +858,14 @@ void fan(){
 }
 
 void dressingtable(){
-//Penteadeiras
-        
+//Penteadeira
+    glPushMatrix();
+    glTranslatef(0, -0.2, -1.3);
+
         //dressing table left body
         glColor3f(0.545, 0.271, 0.075);
         glPushMatrix();
         glTranslatef(5.9,0,4.6);
-        //glRotatef(22, 0,0,1);
         glScalef(0.2, 0.2, 0.2);
         drawCube();
         glPopMatrix();
@@ -865,7 +874,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.9,0,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.01, 0.3, 0.0001);
         drawCube();
         glPopMatrix();
@@ -874,7 +882,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(6.5,0,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.01, 0.2, 0.0001);
         drawCube();
         glPopMatrix();
@@ -883,7 +890,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.9,0,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.2, 0.01, 0.0001);
         drawCube();
         glPopMatrix();
@@ -892,7 +898,6 @@ void dressingtable(){
         glColor3f(0.545, 0.271, 0.075);
         glPushMatrix();
         glTranslatef(7,0,4.6);
-        //glRotatef(22, 0,0,1);
         glScalef(0.2, 0.2, 0.2);
         drawCube();
         glPopMatrix();
@@ -901,7 +906,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7,0,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.01, 0.2, 0.0001);
         drawCube();
         glPopMatrix();
@@ -910,7 +914,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7.6,0,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.01, 0.3, 0.0001);
         drawCube();
         glPopMatrix();
@@ -919,7 +922,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7,0,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.2, 0.01, 0.0001);
         drawCube();
         glPopMatrix();
@@ -928,7 +930,6 @@ void dressingtable(){
         glColor3f(0.545, 0.271, 0.075);
         glPushMatrix();
         glTranslatef(5.9,0.6,4.6);
-        //glRotatef(22, 0,0,1);
         glScalef(0.57, 0.1, 0.2);
         drawCube();
         glPopMatrix();
@@ -937,7 +938,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.9,0.6,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.57, 0.01, 0.0001);
         drawCube();
         glPopMatrix();
@@ -946,7 +946,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.9,0.9,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.57, 0.01, 0.0001);
         drawCube();
         glPopMatrix();
@@ -955,7 +954,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(6.5,0.75,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.16, 0.02, 0.0001);
         drawCube();
         glPopMatrix();
@@ -964,7 +962,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(6.4,0.1,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.02, 0.13, 0.0001);
         drawCube();
         glPopMatrix();
@@ -973,7 +970,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7.1,0.1,5.2);
-        //glRotatef(22, 0,0,1);
         glScalef(0.02, 0.13, 0.0001);
         drawCube();
         glPopMatrix();
@@ -982,7 +978,6 @@ void dressingtable(){
         glColor3f(0.690, 0.878, 0.902);
         glPushMatrix();
         glTranslatef(6.2,0.9,4.7);
-        //glRotatef(22, 0,0,1);
         glScalef(0.36, 0.5, 0.0001);
         drawCube();
         glPopMatrix();
@@ -991,7 +986,6 @@ void dressingtable(){
         glColor3f(0.690, 0.878, 0.902);
         glPushMatrix();
         glTranslatef(5.92,0.9,4.7);
-        //glRotatef(0, 0,1,0);
         glScalef(0.1, 0.48, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1000,7 +994,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.92,0.9,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.019, 0.48, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1009,7 +1002,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(6.17,0.9,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.019, 0.48, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1018,7 +1010,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.92,0.9,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.55, 0.019, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1027,7 +1018,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(5.92,2.3,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.1, 0.019, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1036,7 +1026,6 @@ void dressingtable(){
         glColor3f(0.690, 0.878, 0.902);
         glPushMatrix();
         glTranslatef(7.25,0.9,4.7);
-        //glRotatef(-40, 0,1,0);
         glScalef(0.1, 0.48, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1045,7 +1034,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7.25,2.3,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.1, 0.019, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1054,7 +1042,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7.25,0.9,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.019, 0.48, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1063,7 +1050,6 @@ void dressingtable(){
         glColor3f(0.2,0.1,0.1);
         glPushMatrix();
         glTranslatef(7.5,0.9,4.71);
-        //glRotatef(22, 0,0,1);
         glScalef(0.019, 0.48, 0.0001);
         drawCube();
         glPopMatrix();
@@ -1072,7 +1058,6 @@ void dressingtable(){
         glColor3f(0.690, 0.878, 0.902);
         glPushMatrix();
         glTranslatef(6.2,2.4,4.7);
-        //glRotatef(22, 0,0,1);
         glScalef(0.18, 0.18, 2);
         polygon();
         glPopMatrix();
@@ -1084,6 +1069,8 @@ void dressingtable(){
         glScalef(.18, .18, 1);
         polygonLine();
         glPopMatrix();
+
+    glPopMatrix();
 }
 
 void Clock(){
