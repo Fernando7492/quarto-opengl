@@ -366,39 +366,50 @@ void lamp()
         
 }
 
-void base()
-{
-    // right wall
-    glColor3f(1, 0.8, 0.5);
+
+void base(){
+
+//base do quarto
+
+    // parede direira
+    glColor3ub(135,206,250);
     glPushMatrix();
     glTranslatef(-1.5,-1,.5);
     glScalef(5, 2, 0.1);
     drawCube();
     glPopMatrix();
     
-    // left wall
-    glColor3f(1, 0.8, 0.7);
+    // parede esquerda
+    glColor3ub(173,216,230);
     glPushMatrix();
     glTranslatef(-4.5,-1,0);
     glScalef(1, 2, 5);
     drawCube();
     glPopMatrix();
     
-   //ceiling
-    glColor3f(1.0, 0.9, 0.8);
+   //teto
+    glColor3ub(175,238,238);
     glPushMatrix();
-    //glScalef(5, 0.1, 7);
     glTranslatef(-2,5.1,0);
     glScalef(5, 0.1, 7);
     drawCube();
     glPopMatrix();
     
-    // carpet
-    glColor3f(0.4, 0.1, 0.0);
-    glPushMatrix();
+    // tapete*****
+    //glColor3ub(135,206,235);
+    //glPushMatrix();
     //glScalef(5, 0.1, 7);
-    glTranslatef(3,-0.2,7);
-    glScalef(1.3, 0.01, 1.7);
+    //glTranslatef(3,-0.2,7);
+    //glScalef(1.3, 0.01, 1.7);
+    //drawCube();
+    //glPopMatrix();
+
+    // chão
+    glColor3ub(139,69,19);
+    glPushMatrix();
+    glScalef(5, 0.1, 7);
+    glTranslatef(-1,-5,0); //-1,-5,.5
+    //glScalef(5, 0.1, 7);
     drawCube();
     glPopMatrix();
 }
@@ -491,7 +502,7 @@ void flower()
 
 void wallshelf()
 {
-    //Wall Shelf **********************************************
+    //Prateleiras **********************************************
       
       //wall shelf one
       glColor3f(0.2,0.1,0.1);
@@ -643,16 +654,6 @@ void wallshelf()
       drawpyramid();
       glPopMatrix();
 
-      
-      
-      // floor
-      glColor3f(0.5, 0.1, 0.0);
-      glPushMatrix();
-      glScalef(5, 0.1, 7);
-      glTranslatef(-1,-5,0); //-1,-5,.5
-      //glScalef(5, 0.1, 7);
-      drawCube();
-      glPopMatrix();
 }
 
 void LinkinParkPoster()
