@@ -360,7 +360,7 @@ void base(){
     // parede direira
     glColor3ub(135,206,250);
     glPushMatrix();
-    glTranslatef(-1.5,-0.5, -0.3);
+    glTranslatef(-1.5,-0.5, 2.7);
     glScalef(4, 2, 0.1);
     drawCube();
     glPopMatrix();
@@ -368,8 +368,8 @@ void base(){
     // Parede esquerda
     glColor3ub(173,216,230);
     glPushMatrix();
-    glTranslatef(-1.5, -0.5, 0);
-    glScalef(0.1, 2, 4);
+    glTranslatef(-1.5, -0.5, 2.7);
+    glScalef(0.1, 2, 3);
     drawCube();
     glPopMatrix();
     
@@ -377,16 +377,16 @@ void base(){
    //teto
     glColor3ub(175,238,238);
     glPushMatrix();
-    glTranslatef(-1.5,5,0);
-    glScalef(4, 0.1, 4);
+    glTranslatef(-1.5,5,2.7);
+    glScalef(4, 0.1, 3);
     drawCube();
     glPopMatrix();
 
     // chão
     glColor3ub(139,69,19);
     glPushMatrix();
-    glScalef(4, 0.1, 4);
-    glTranslatef(-0.3,-5,0);
+    glScalef(3.9, 0.1, 2.92);
+    glTranslatef(-0.31,-5,1);
     drawCube();
     glPopMatrix();
 }
