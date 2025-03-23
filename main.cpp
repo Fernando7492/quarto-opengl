@@ -241,7 +241,9 @@ void guardaRoupas(){
 
 void criadoMudo(){
 //Criado Mudo
-      
+
+    glPushMatrix();
+    glTranslatef(-1.61, -0.1, 0);
       //side drawer
       glColor3f(0.2,0.1,0.1); //0.5,0.2,0.2
       glPushMatrix();
@@ -264,21 +266,24 @@ void criadoMudo(){
       glColor3f(0.3, 0.1, 0.0);
       glPushMatrix();
       glTranslatef(0.9,0.1,9);
-      //glRotatef(22, 0,0,1);
       glScalef(0.0001, 0.04, 0.04);
       drawCube();
       glPopMatrix();
+
+    glPopMatrix();
 }
 
 
 void cama(){
 //Cama 
+    glPushMatrix();
+    glTranslatef(-0.98, 0, 0);
 
     //bed headboard
     glColor3f(0.5,0.2,0.2);
     glPushMatrix();
     glScalef(0.1, 0.5, 0.9);
-    glTranslatef(-2,-0.5,6);
+    glTranslatef(-2,-0.5,6.2);
     drawCube();
     glPopMatrix();
     
@@ -325,35 +330,41 @@ void cama(){
     glScalef(0.5, 0.25, 0.05);
     drawCube();
     glPopMatrix();
+
+    glPopMatrix();
     
 }
 
-void lampada(){
+void abajur(){
 //Lamp 
-        
-        //lamp base
-        glColor3f(0,0,1);
+    glPushMatrix();
+    glTranslatef(-0.5, 0, -4.5);
+
+        //base
+        glColor3ub(0,0,0);
         glPushMatrix();
-        glTranslatef(.6,0.5,9.1);
-        glScalef(0.07, 0.02, 0.07);
+        glTranslatef(0.6,-0.2,9.1);
+        glScalef(0.2, 0.02, 0.2);
         drawCube();
         glPopMatrix();
         
-        //lamp stand
-        glColor3f(1,0,0);
+        //haste
+        glColor3ub(0,0,0);
         glPushMatrix();
-        glTranslatef(.7,0.35,9.2);
-        glScalef(0.01, 0.2, 0.01);
+        glTranslatef(0.9,-0.2,9.4);
+        glScalef(0.01, 0.9, 0.01);
         drawCube();
         glPopMatrix();
         
-        //lamp shade
-        glColor3f(0.000, 0.000, 0.545);
+        //lampada
+        glColor3ub(255,255,0);
         glPushMatrix();
-        glTranslatef(.7,0.9,9.2);
-        glScalef(0.08, 0.09, 0.08);
+        glTranslatef(0.6,2.5,9.1);
+        glScalef(0.2, 0.09, 0.2);
         drawCube();
         glPopMatrix();
+
+    glPopMatrix();
         
 }
 
@@ -393,16 +404,25 @@ void base(){
     glTranslatef(-0.31,-5,1);
     drawCube();
     glPopMatrix();
+
+    // carpete
+    glColor3f(0.4, 0.1, 0.0);
+    glPushMatrix();
+    glTranslatef(2,-0.2,5);
+    glScalef(1.3, 0.01, 1.7);
+    drawCube();
+    glPopMatrix();
 }
 
 void flor(){
 //Vaso de flor
-        
-    //vase
+    glPushMatrix();
+    glTranslatef(-1.78, 0.4, -1.1); 
+
+    //vaso
     glColor3f(0.545, 0.271, 0.075);
     glPushMatrix();
     glTranslatef(.7,0,10);
-    //glRotatef(22, 0,0,1);
     glScalef(0.1, 0.1, 0.1);
     drawCube();
     glPopMatrix();
@@ -411,7 +431,6 @@ void flor(){
     glColor3f(.3,.1,0);
     glPushMatrix();
     glTranslatef(0.99,0.23,10);
-    //glRotatef(22, 0,0,1);
     glScalef(0.01, 0.01, 0.1);
     drawCube();
     glPopMatrix();
@@ -420,7 +439,6 @@ void flor(){
     glColor3f(.3,.1,0);
     glPushMatrix();
     glTranslatef(0.7,0.23,10.3);
-    //glRotatef(22, 0,0,1);
     glScalef(0.1, 0.01, 0.01);
     drawCube();
     glPopMatrix();
@@ -476,6 +494,8 @@ void flor(){
     glRotatef(120, 1,0,0);
     glScalef(0.04, 0.07, 0.04);
     drawpyramid();
+    glPopMatrix();
+
     glPopMatrix();
     
 }
@@ -616,7 +636,7 @@ void prateleiras(){
 void armario(){
 //Armário
     glPushMatrix();
-    glTranslatef(0, -0.2, 0);
+    glTranslatef(-1.1, -0.2, 0);
 
        //wardrobe
        glColor3f(0.3,0.1,0);
@@ -630,7 +650,6 @@ void armario(){
        glColor3f(0.5,0.2,0.2);
        glPushMatrix();
        glTranslatef(0.36,1.4,4.05);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.11, 0.38);
        drawCube();
        glPopMatrix();
@@ -639,7 +658,6 @@ void armario(){
        glColor3f(0.5,0.2,0.2);
        glPushMatrix();
        glTranslatef(0.36,1,4.05);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.11, 0.38);
        drawCube();
        glPopMatrix();
@@ -648,7 +666,6 @@ void armario(){
        glColor3f(0.5,0.2,0.2);
        glPushMatrix();
        glTranslatef(0.36,0.6,4.05);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.11, 0.38);
        drawCube();
        glPopMatrix();
@@ -656,8 +673,7 @@ void armario(){
        //wardrobe's 4th drawer
        glColor3f(0.5,0.2,0.2);
        glPushMatrix();
-       glTranslatef(0.36,0.2,4.05);
-       //glRotatef(22, 0,0,1);
+       glTranslatef(0.36,0.2,4.05);;
        glScalef(0.0001, 0.11, 0.38);
        drawCube();
        glPopMatrix();
@@ -666,7 +682,6 @@ void armario(){
        glColor3f(0.3,0.1,0);
        glPushMatrix();
        glTranslatef(0.37,1.5,4.3);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.03, 0.2);
        drawCube();
        glPopMatrix();
@@ -675,7 +690,6 @@ void armario(){
        glColor3f(0.3,0.1,0);
        glPushMatrix();
        glTranslatef(0.37,1.1,4.3);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.03, 0.2);
        drawCube();
        glPopMatrix();
@@ -684,7 +698,6 @@ void armario(){
        glColor3f(0.3,0.1,0);
        glPushMatrix();
        glTranslatef(0.37,0.7,4.3);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.03, 0.2);
        drawCube();
        glPopMatrix();
@@ -693,7 +706,6 @@ void armario(){
        glColor3f(0.3,0.1,0);
        glPushMatrix();
        glTranslatef(0.37,0.3,4.3);
-       //glRotatef(22, 0,0,1);
        glScalef(0.0001, 0.03, 0.2);
        drawCube();
        glPopMatrix();
@@ -702,7 +714,6 @@ void armario(){
        glColor3f(0.5,0.2,0.2);
        glPushMatrix();
        glTranslatef(0.35,0,5.3);
-       //glRotatef(22, 0,0,1);
        glScalef(0.01, 0.6, 0.0001);
        drawCube();
        glPopMatrix();
@@ -713,7 +724,7 @@ void armario(){
 void janela(){
 //Janela
     glPushMatrix();
-    glTranslatef(-0.23, 0, 0);
+    glTranslatef(-0.23, 0.5, -2.3);
 
     //window white open
     glColor3f(1.0,1.0,1.0);
@@ -760,7 +771,6 @@ void janela(){
     glColor3f(0.0,0.0,0.0);
     glPushMatrix();
     glTranslatef(-0.87,2.1,8.9);
-    //glRotatef(22, 0,0,1);
     glScalef(0.0001, 0.02, 0.3);
     drawCube();
     glPopMatrix();
@@ -769,7 +779,6 @@ void janela(){
     glColor3f(0.0,0.0,0.0);
     glPushMatrix();
     glTranslatef(-0.87,1.6,8.9);
-    //glRotatef(22, 0,0,1);
     glScalef(0.0001, 0.02, 0.3);
     drawCube();
     glPopMatrix();
@@ -778,7 +787,6 @@ void janela(){
     glColor3f(0.0,0.0,0.0);
     glPushMatrix();
     glTranslatef(-0.87,1,9.3);
-    //glRotatef(22, 0,0,1);
     glScalef(0.0001, 0.6, 0.02);
     drawCube();
     glPopMatrix();
@@ -1053,7 +1061,9 @@ void penteadeira(){
 
 void relogio(){
 //Relógio
-        
+    glPushMatrix();
+    glTranslatef(-0.23, 0, 0);
+
         //clock body
         glColor3f(0.545, 0.271, 0.075);
         glPushMatrix();
@@ -1143,6 +1153,7 @@ void relogio(){
         glScalef(0.2, 0.1, 0.2);
         drawpyramid();
         glPopMatrix();
+    glPopMatrix();
 }
 
 
@@ -1164,7 +1175,7 @@ void display(void){
     criadoMudo();
     cama();
     guardaRoupas();
-    lampada();
+    abajur();
     flor();
     prateleiras();
     armario();
