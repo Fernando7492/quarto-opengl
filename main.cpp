@@ -803,7 +803,7 @@ void fan(){
     //stand
     glColor3f(0.2,0.1,0.1);
     glPushMatrix();
-    glTranslatef(0.1,0,0.09);
+    glTranslatef(-0.02,0,-0.02);
     glScalef(0.01,0.4,0.01);
     //glTranslatef(-1.5,-1.5,-1.5);
     drawCube();
