@@ -1,6 +1,9 @@
 #ifndef BEDROOM_OBJECTS_H
 #define BEDROOM_OBJECTS_H
 
+#include <GL/glew.h>
+#include <GL/glut.h>
+
 extern GLboolean redFlag;
 extern GLboolean fanSwitch;
 extern double theta;
