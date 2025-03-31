@@ -4,7 +4,7 @@
 #include <simpleDraw.h>
 
 void bed(){
-    //Cama 
+        //Cama 
         glPushMatrix();
         glTranslatef(-0.98, 0, 0);
     

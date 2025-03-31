@@ -4,7 +4,7 @@
 #include <simpleDraw.h>
 
 void myClock(){
-    //Relógio
+        //Relógio
         glPushMatrix();
         glTranslatef(-0.23, 0, 0);
     
