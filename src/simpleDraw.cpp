@@ -22,16 +22,6 @@ static GLubyte quadIndices[6][4] = {
     {1, 5, 4, 0}  //left is clockwise
 };
 
-/*
-static GLfloat colors[6][3] = {
-    {0.4, 0.1, 0.0}, //bottom
-    {0.6, 0.0, 0.7}, //top
-    {0.0, 1.0, 0.0},
-    {0.0, 1.0, 1.0},
-    {0.8, 0.0, 0.0},
-    {0.3, 0.6, 0.7}
-};
-*/
 static GLfloat v_pyramid[5][3] = {
     {0.0, 0.0, 0.0},
     {0.0, 0.0, 2.0},
@@ -105,7 +95,6 @@ void polygon(){
 
 void polygonLine(){
     glBegin(GL_LINE_STRIP);
-    //glVertex2f(0,0);
     glVertex2f(6,0);
     glVertex2f(5.8,1);
     glVertex2f(5.2,2);

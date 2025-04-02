@@ -8,7 +8,7 @@ void bed(){
         glPushMatrix();
         glTranslatef(-0.98, 0, 0);
     
-        //bed headboard
+        //cabeceira
         glColor3f(0.5,0.2,0.2);
         glPushMatrix();
         glScalef(0.1, 0.5, 0.9);
@@ -16,15 +16,15 @@ void bed(){
         drawCube();
         glPopMatrix();
         
-        //bed body
+        //cama
         glColor3f(0.824, 0.706, 0.549);
         glPushMatrix();
-        glScalef(1, 0.2, 0.9); //1, 0.2, 0.9
+        glScalef(1, 0.2, 0.9);
         glTranslatef(0,-0.5,6.2);
         drawCube();
         glPopMatrix();
         
-        //pillow right far
+        //travesseiro direto
         glColor3f(0.627, 0.322, 0.176);
         glPushMatrix();
         glTranslatef(0.5,0.5,6);
@@ -33,7 +33,7 @@ void bed(){
         drawCube();
         glPopMatrix();
         
-        //pillow left near
+        //travesseiro esquerdo
         glColor3f(0.627, 0.322, 0.176);
         glPushMatrix();
         glTranslatef(0.5,0.5,7.2);
@@ -42,20 +42,18 @@ void bed(){
         drawCube();
         glPopMatrix();
         
-        //blanket
+        //colcha
         glColor3f(0.627, 0.322, 0.176);
         glPushMatrix();
         glTranslatef(1.4,0.45,5.5);
-        //glRotatef(22, 0,0,1);
         glScalef(0.5, 0.05, 0.95);
         drawCube();
         glPopMatrix();
         
-        //blanket side left part
+        //coberta
         glColor3f(0.627, 0.322, 0.176);
         glPushMatrix();
         glTranslatef(1.4,-0.3,8.15);
-        //glRotatef(22, 0,0,1);
         glScalef(0.5, 0.25, 0.05);
         drawCube();
         glPopMatrix();

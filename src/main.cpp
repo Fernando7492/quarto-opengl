@@ -30,10 +30,8 @@ int main (int argc, char **argv)
 
     glShadeModel( GL_SMOOTH );
     glEnable( GL_DEPTH_TEST );
-    //glEnable(GL_NORMALIZE);
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);
-    //glutSpecialFunc(myKeyboardFunc);
     glutIdleFunc(animations);
     glutMainLoop();
 

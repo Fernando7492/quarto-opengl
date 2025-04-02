@@ -13,7 +13,7 @@ void display(void){
 
     glMatrixMode( GL_MODELVIEW );
     glLoadIdentity();
-    gluLookAt(eyeX,eyeY,eyeZ,  refX,refY,refZ,  0,1,0); //7,2,15, 0,0,0, 0,1,0
+    gluLookAt(eyeX,eyeY,eyeZ,  refX,refY,refZ,  0,1,0);
 
     glViewport(0, 0, 800, 600);
     

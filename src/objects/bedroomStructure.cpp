@@ -20,8 +20,7 @@ void bedroomStructure(){
         glTranslatef(-1.5, -0.5, 2.7);
         glScalef(0.1, 2, 3);
         drawCube();
-        glPopMatrix();
-        
+        glPopMatrix(); 
         
        //teto
         glColor3ub(175,238,238);

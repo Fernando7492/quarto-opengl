@@ -12,7 +12,6 @@ void myClock(){
             glColor3f(0.545, 0.271, 0.075);
             glPushMatrix();
             glTranslatef(-0.9,1.8,7.87);
-            //glRotatef(22, 0,0,1);
             glScalef(0.08, 0.25, 0.1);
             drawCube();
             glPopMatrix();
@@ -21,13 +20,12 @@ void myClock(){
             glColor3f(1.000, 0.894, 0.710);
             glPushMatrix();
             glTranslatef(-0.83,1.9,7.9);
-            //glRotatef(22, 0,0,1);
             glScalef(0.06, 0.2, 0.08);
             drawCube();
             glPopMatrix();
             
             //clock hour handle
-            glColor3f(0,0,0); //0.2,0.1,0.1
+            glColor3f(0,0,0);
             glPushMatrix();
             glTranslatef(-0.65,2.18,8.01);
             glRotatef(45, 1,0,0);
@@ -36,7 +34,7 @@ void myClock(){
             glPopMatrix();
             
            //clock minute handle
-            glColor3f(0,0,0); //0.2,0.1,0.1
+            glColor3f(0,0,0);
             glPushMatrix();
             glTranslatef(-0.65,2.18,8.01);
             glRotatef(90, 1,0,0);
@@ -45,34 +43,31 @@ void myClock(){
             glPopMatrix();
             
             //clock body bottom strip
-            glColor3f(0.2,0.1,0.1); //0.2,0.1,0.1
+            glColor3f(0.2,0.1,0.1);
             glPushMatrix();
             glTranslatef(-0.66,1.8,7.89);
-            //glRotatef(22, 0,0,1);
             glScalef(0.001, 0.01, 0.1);
             drawCube();
             glPopMatrix();
             
             //clock body right strip
-            glColor3f(0.0,0.0,0.0); //0.2,0.1,0.1
+            glColor3f(0.0,0.0,0.0);
             glPushMatrix();
             glTranslatef(-0.66,1.8,7.89);
-            //glRotatef(22, 0,0,1);
             glScalef(0.005, 0.25, 0.01);
             drawCube();
             glPopMatrix();
             
             //clock body left strip
-            glColor3f(0.2,0.1,0.1); //0.2,0.1,0.1
+            glColor3f(0.2,0.1,0.1);
             glPushMatrix();
             glTranslatef(-0.65,1.8,8.2);
-            //glRotatef(22, 0,0,1);
             glScalef(0.0001, 0.25, 0.01);
             drawCube();
             glPopMatrix();
     
             //clock pendulum stick
-            glColor3f(0.2,0.1,0.1); //0.2,0.1,0.1
+            glColor3f(0.2,0.1,0.1);
             glPushMatrix();
             glTranslatef(-0.7,2,8.1);
             glRotatef(theta, 1,0,0);
@@ -81,10 +76,9 @@ void myClock(){
             glPopMatrix();
             
             //clock pendulum ball
-            glColor3f(0.2,0.1,0.1); //0.2,0.1,0.1
+            glColor3f(0.2,0.1,0.1);
             glPushMatrix();
             glTranslatef(-0.72,1.42,z);
-            //glRotatef(x, 1,0,0);
             glScalef(0.035, 0.035, 0.035);
             drawCube();
             glPopMatrix();
@@ -93,7 +87,6 @@ void myClock(){
             glColor3f(0.5, 0.2, 0);
             glPushMatrix();
             glTranslatef(-0.9,2.5,7.87);
-            //glRotatef(x, 1,0,0);
             glScalef(0.2, 0.1, 0.2);
             drawPyramid();
             glPopMatrix();
